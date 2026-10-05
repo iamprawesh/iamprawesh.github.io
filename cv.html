@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Prawesh Panthi - CV</title>
+	<meta name="description" content="CV of Prawesh Panthi, Senior Mobile Application Developer (Flutter, Android/Kotlin, Cross-Platform).">
+	<meta name="author" content="Prawesh Panthi">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<style>
+		:root {
+			--navy: #1f3864;
+			--accent: #2e74b5;
+			--band: #e8eef7;
+			--text: #333;
+			--muted: #555;
+		}
+
+		* { box-sizing: border-box; }
+
+		html { background: #eef1f5; }
+
+		body {
+			margin: 0;
+			font-family: "Lato", "Segoe UI", Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.45;
+			color: var(--text);
+		}
+
+		a { color: inherit; text-decoration: none; }
+
+		/* toolbar (screen only) */
+		.toolbar {
+			max-width: 860px;
+			margin: 24px auto 12px;
+			padding: 0 16px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 12px;
+			flex-wrap: wrap;
+		}
+		.toolbar a, .toolbar button {
+			font: inherit;
+			font-weight: 700;
+			padding: 10px 18px;
+			border-radius: 4px;
+			border: 1px solid var(--navy);
+			cursor: pointer;
+		}
+		.toolbar .back { color: var(--navy); background: #fff; }
+		.toolbar .download { color: #fff; background: var(--navy); }
+		.toolbar .hint { color: var(--muted); font-size: 13px; }
+
+		/* page */
+		.cv {
+			max-width: 860px;
+			margin: 0 auto 40px;
+			padding: 40px 48px;
+			background: #fff;
+			box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+		}
+
+		.cv-header {
+			background: var(--navy);
+			color: #fff;
+			text-align: center;
+			padding: 14px 16px 12px;
+		}
+		.cv-header h1 {
+			margin: 0;
+			font-size: 30px;
+			letter-spacing: .5px;
+		}
+		.cv-header .title {
+			margin: 4px 0 2px;
+			font-weight: 700;
+			font-size: 14px;
+		}
+		.cv-header .title em { font-weight: 400; opacity: .85; }
+		.cv-header .contact { font-size: 15px; }
+		.cv-header .contact span + span::before { content: "|"; margin: 0 8px; }
+
+		h2 {
+			margin: 22px 0 10px;
+			padding: 3px 12px;
+			font-size: 15px;
+			color: var(--navy);
+			background: var(--band);
+			border-left: 5px solid var(--accent);
+			text-transform: uppercase;
+		}
+
+		p { margin: 0 0 8px; }
+
+		.skills { list-style: none; padding: 0; margin: 0; }
+		.skills li { margin-bottom: 6px; }
+		.skills li::before { content: "\25AA\00a0"; color: var(--accent); }
+		.skills strong { color: var(--navy); }
+
+		.entry { margin-top: 14px; break-inside: avoid; }
+		.entry-head {
+			display: flex;
+			justify-content: space-between;
+			gap: 12px;
+			border-left: 4px solid var(--accent);
+			padding-left: 8px;
+		}
+		.entry-head h3 { margin: 0; font-size: 16px; color: var(--navy); }
+		.entry-head .org { font-style: italic; font-weight: 700; color: var(--muted); font-size: 13px; }
+		.date { color: var(--accent); font-style: italic; white-space: nowrap; font-size: 13px; }
+
+		.role { margin: 10px 0 0 14px; }
+		.role .entry-head h3 { font-size: 14px; }
+
+		ul.bullets { margin: 6px 0 0; padding-left: 58px; }
+		ul.bullets li { margin-bottom: 4px; }
+		ul.bullets strong { color: var(--navy); }
+
+		@media (max-width: 640px) {
+			.cv { padding: 20px 16px; }
+			.entry-head { flex-direction: column; gap: 0; }
+			ul.bullets { padding-left: 22px; }
+			.role { margin-left: 4px; }
+			.cv-header .contact span { display: block; }
+			.cv-header .contact span + span::before { content: none; }
+		}
+
+		/* print / save as PDF */
+		@page { size: A4; margin: 12mm 14mm; }
+
+		@media print {
+			html, body { background: #fff; }
+			body { font-size: 11.5px; }
+			.toolbar { display: none; }
+			.cv { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+			.cv-header, h2 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+			.cv-header h1 { font-size: 26px; }
+			.entry-head h3 { font-size: 13.5px; }
+			.role .entry-head h3 { font-size: 12.5px; }
+			h2 { font-size: 13px; break-after: avoid; }
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="toolbar">
+		<a class="back" href="index.html">&larr; Back to website</a>
+		<span class="hint">Tip: press Ctrl + P (Cmd + P on Mac) and choose "Save as PDF".</span>
+		<button class="download" type="button" onclick="window.print()">Download PDF</button>
+	</div>
+
+	<main class="cv">
+
+		<header class="cv-header">
+			<h1>PRAWESH PANTHI</h1>
+			<p class="title">SENIOR MOBILE APPLICATION DEVELOPER &middot; <em>Flutter &middot; Android (Kotlin) &middot; Cross-Platform</em></p>
+			<p class="contact">
+				<span>Kathmandu, Nepal</span><span><a href="mailto:praweshpanthi@gmail.com">praweshpanthi@gmail.com</a></span><span><a href="tel:+9779866984000">+977-9866984000</a></span><span><a href="https://iamprawesh.github.io">iamprawesh.github.io</a></span>
+			</p>
+		</header>
+
+		<h2>Professional Summary</h2>
+		<p>Mobile Application Developer with 5+ years of software engineering experience, including 4+ years specialized in native Android (Kotlin) and cross-platform (Flutter) development. Proven record of owning mobile applications end-to-end &mdash; from architecture through production release &mdash; across fintech, e-commerce, civic-tech, and media platforms, including hands-on resolution of legacy codebase issues other developers were unable to fix. Experienced leading mobile development teams, mentoring engineers and students, and building scalable, offline-capable systems using modern Android and Flutter architectures.</p>
+
+		<h2>Technical Skills</h2>
+		<ul class="skills">
+			<li><strong>Languages:</strong> Dart, Kotlin, Java, JavaScript, Python, SQL</li>
+			<li><strong>Mobile:</strong> Flutter, Kotlin, Jetpack Compose, BLoC / Cubit, Provider, Dart Isolates, Kotlin Coroutines &amp; Flow, Room, WorkManager, Hilt, Retrofit, SQLite, Hive</li>
+			<li><strong>Architecture:</strong> Clean Architecture, MVVM / MVP / MVC, Repository Pattern, Offline-First &amp; Data Sync</li>
+			<li><strong>Networking &amp; Services:</strong> REST, GraphQL, WebSockets, Socket.IO, Firebase (FCM, Auth, Crashlytics), Payment Gateway Integration</li>
+			<li><strong>Also worked with:</strong> React Native, Node.js, Express, NestJS, Next.js, MongoDB</li>
+			<li><strong>Tools &amp; Practices:</strong> Git, CI/CD, Shorebird OTA Code-Push, Play Store &amp; App Store Releases, Legacy System Modernization, Team Leadership</li>
+		</ul>
+
+		<h2>Professional Experience</h2>
+
+		<section class="entry">
+			<div class="entry-head">
+				<h3>Evolve Pvt. Ltd., Kathmandu, Nepal</h3>
+				<span class="date">Dec 2023 &ndash; Present</span>
+			</div>
+
+			<div class="role">
+				<div class="entry-head">
+					<h3>Senior Software Engineer &mdash; Native Android (Kotlin) &amp; Flutter</h3>
+					<span class="date">Dec 2024 &ndash; Present</span>
+				</div>
+				<ul class="bullets">
+					<li>Promoted to Senior Software Engineer after one year, taking on full ownership of the mobile team's architecture, delivery, and technical direction.</li>
+					<li>Lead a 3-person mobile team across 7 concurrent native Android and Flutter applications within an office-first operational strategy, translating complex business requirements into production technical solutions.</li>
+					<li>Diagnosed and resolved critical legacy codebase issues that other developers on the team had been unable to fix, restoring stability to core production features without a full rewrite.</li>
+					<li>Coordinate delivery across native and cross-platform streams, mentoring team members on Android and Flutter best practices.</li>
+					<li>Introduced Shorebird as a code-push distribution mechanism for the Flutter apps, enabling silent, over-the-air patch delivery without requiring app store review or a full release cycle.</li>
+				</ul>
+			</div>
+
+			<div class="role">
+				<div class="entry-head">
+					<h3>Software Engineer &mdash; Native Android (Kotlin) &amp; Flutter</h3>
+					<span class="date">Dec 2023 &ndash; Dec 2024</span>
+				</div>
+				<ul class="bullets">
+					<li>Architected the foundational Flutter codebase structure used to bootstrap new projects, establishing reusable modules, project scaffolding, and essential tooling that accelerated setup for subsequent apps.</li>
+					<li>Architected scalable app data layers using SQLite, Room, and Kotlin Coroutines/WorkManager for lifecycle-aware background processing, and used Dart Isolates to offload CPU-intensive work from the Flutter UI thread, keeping the app responsive under heavy load.</li>
+					<li>Resolved critical real-time production issues and maintained legacy codebases while shipping new features on schedule.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="entry">
+			<div class="entry-head">
+				<div>
+					<h3>Mobile Application Developer &mdash; Flutter (iOS &amp; Android) (Contract)</h3>
+					<span class="org">Yantrik, Kathmandu, Nepal</span>
+				</div>
+				<span class="date">Mar 2024 &ndash; Mar 2025</span>
+			</div>
+			<ul class="bullets">
+				<li>Sole mobile developer for a US-based taxation platform built in Flutter: owned iOS and Android development end-to-end, from initial architecture through production release.</li>
+				<li>Built and refined the document scanning flow for tax form capture, documenting edge cases uncovered during testing (lighting, skew, partial captures) to guide detection and validation logic.</li>
+				<li>Contributed to the companion Next.js web admin panel supporting the same platform.</li>
+			</ul>
+		</section>
+
+		<section class="entry">
+			<div class="entry-head">
+				<div>
+					<h3>Lecturer &mdash; Mobile Programming &amp; Web Technology (Part-time)</h3>
+					<span class="org">Nepal Kasthamandap College, Kathmandu, Nepal</span>
+				</div>
+				<span class="date">Jan 2024 &ndash; Feb 2025</span>
+			</div>
+			<ul class="bullets">
+				<li>Delivered 9 hours/week of undergraduate instruction in Mobile Programming and Web Technology.</li>
+				<li>Designed course curriculum, coding exercises, and hands-on projects; mentored students through applied programming challenges.</li>
+			</ul>
+		</section>
+
+		<section class="entry">
+			<div class="entry-head">
+				<div>
+					<h3>Flutter Developer</h3>
+					<span class="org">The Kadel Groups, Kathmandu, Nepal</span>
+				</div>
+				<span class="date">Jun 2023 &ndash; Dec 2023</span>
+			</div>
+			<ul class="bullets">
+				<li>Sole developer for a student engagement app built for The British College, owning end-to-end development of assignment tracking, attendance monitoring, and leave management features.</li>
+				<li>Built a cross-platform e-commerce application delivering a unified shopping experience on Android and iOS.</li>
+			</ul>
+		</section>
+
+		<section class="entry">
+			<div class="entry-head">
+				<div>
+					<h3>Mobile Application Developer</h3>
+					<span class="org">EverestWalk Groups, Kathmandu, Nepal</span>
+				</div>
+				<span class="date">Jan 2022 &ndash; Jun 2023</span>
+			</div>
+			<ul class="bullets">
+				<li>Led mobile development of Cinepebble, a social platform for media professionals, implementing real-time chat, live data sync, and payment integration.</li>
+				<li>Built Smartnagar, a Flutter-based civic-tech application for digitizing local government services &mdash; including offline surveys, vital registration, and complaint management &mdash; paired with a NestJS backend.</li>
+				<li>Contributed to an Academic Management System app supporting school administration for teachers and students.</li>
+				<li>Delivered API integrations and feature/bug-fix work across two additional production e-commerce apps (Megha Publication, Poshyak).</li>
+			</ul>
+		</section>
+
+		<section class="entry">
+			<div class="entry-head">
+				<div>
+					<h3>Mobile Application Developer</h3>
+					<span class="org">Techie IT, Kathmandu, Nepal</span>
+				</div>
+				<span class="date">Jan 2021 &ndash; Jun 2021</span>
+			</div>
+			<ul class="bullets">
+				<li>Built mobile applications using React Native and Flutter, integrating REST and GraphQL APIs with local persistence via SQLite and Shared Preferences.</li>
+			</ul>
+		</section>
+
+		<h2>Education</h2>
+
+		<section class="entry">
+			<div class="entry-head">
+				<div>
+					<h3>Bachelor of Computer Application (BCA)</h3>
+					<span class="org">Patan Multiple Campus, Tribhuvan University, Kathmandu, Nepal</span>
+				</div>
+				<span class="date">2017 &ndash; 2021</span>
+			</div>
+			<p style="margin-top: 6px;">GPA: 3.56 | Coursework: Data Structures &amp; Algorithms, Operating Systems, Web Technology, Mobile Programming, Machine Learning</p>
+		</section>
+
+		<h2>Selected Projects</h2>
+		<ul class="bullets">
+			<li><strong>Instagram Clone &mdash;</strong> Full-stack clone with authentication, posts, likes, comments, and real-time updates.</li>
+			<li><strong>NEWSIO &mdash;</strong> Flutter news aggregator pulling articles from multiple international sources.</li>
+			<li><strong>Social Share &mdash;</strong> React Native social app with a quiz feature; backend built with Node.js, Express, and MongoDB.</li>
+			<li><strong>Recommendation Engine &mdash;</strong> Music and movie recommender system using collaborative filtering on public datasets.</li>
+			<li><strong>Computer Vision Projects &mdash;</strong> Hand gesture recognition and traffic sign detection using machine learning techniques.</li>
+		</ul>
+
+	</main>
+
+	<script>
+		// opened from the website's Ctrl/Cmd + P fallback: print straight away
+		if (/[?&]print=1/.test(location.search)) {
+			window.addEventListener('load', function () { window.print(); });
+		}
+	</script>
+
+</body>
+</html>
