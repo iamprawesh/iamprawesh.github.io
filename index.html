@@ -259,9 +259,10 @@
             <li>Lead a 3-person mobile team that runs 7 Android and Flutter apps at once.</li>
             <li>Building the CameraX pipeline that checks image sharpness and feeds clear images to an AI model.</li>
             <li>Fixed critical legacy bugs that others on the team couldn't solve, without rewriting the code.</li>
-            <li>Introduced Shorebird, so Flutter fixes ship over the air without waiting on store review.</li>
+            <li>Introduced Shorebird releases and code push, so Flutter fixes ship over the air without waiting on store review.</li>
             <li>Set up shared Firebase tooling across the apps: Remote Config feature flags, API URLs that can be switched remotely, and Crashlytics.</li>
-            <li>Built the Flutter project scaffold and offline data layers (SQLite, Room, WorkManager, Isolates).</li>
+            <li>Built offline-first apps: data is fetched on first launch, kept in a local SQL database (SQLite, Room) and synced with the server when the internet is back.</li>
+            <li>Built the Flutter project scaffold, with WorkManager background jobs and Isolates for heavy work.</li>
           </ul>
         </div>
       </div>
