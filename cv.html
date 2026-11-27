@@ -34,7 +34,7 @@
   .back{max-width:860px;margin:0 auto 32px;text-align:center;font:13px system-ui;color:#666}
   .back a{color:var(--blue)}
   @media (max-width:640px){.page{padding:20px 16px;margin:0}.org,.role-line{flex-direction:column}.date{padding-left:0}}
-  @media print{body{background:#fff}.page{box-shadow:none;margin:0;max-width:none;padding:0}.back{display:none}@page{size:A4;margin:12mm 13mm}h2{break-after:avoid}.org,.role-line{break-after:avoid}}
+  @media print{body{background:#fff}.page{box-shadow:none;margin:0;max-width:none;padding:0}.back{display:none}@page{size:A4;margin:11mm 12mm}body{font-size:10pt;line-height:1.38}h2{margin:12px 0 6px}.org{margin-top:7px}ul.b li{margin:1px 0}h2{break-after:avoid}.org,.role-line{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -115,19 +115,6 @@
     <li>Built mobile applications in React Native and Flutter, integrating REST and GraphQL APIs with local persistence via SQLite and Shared Preferences.</li>
   </ul>
 
-  <h2>Featured Project</h2>
-  <div class="proj">
-    <p><b>KhelSlot: Futsal Booking Platform</b> (personal product · Flutter Web / Android / iOS · Firebase)</p>
-    <ul class="b">
-      <li>Designed and built a multi-tenant booking platform for Nepali futsal venues with three roles in one codebase: <b>players</b> (no sign-up, book a free slot over WhatsApp), <b>venue admins</b> (availability grid, walk-in/phone bookings, pricing, reports) and a <b>super admin</b> (venues, admin logins, memberships, platform reports).</li>
-      <li>Used a feature-first layered <b>MVVM</b> architecture with <b>flutter_bloc Cubits</b> as view models and the <b>repository pattern</b> (page → cubit → repository interface → Firebase or in-memory implementation). Pages never touch Firebase directly.</li>
-      <li>Streamed <b>Cloud Firestore</b> data in real time into Cubits. Wrote <b>role-based, venue-scoped Firestore security rules</b> that keep customer data private and stop venue admins from editing membership fields.</li>
-      <li>Implemented the domain logic as pure, unit-tested Dart functions: peak-hour/weekday/special-date pricing, 7-a-side grounds that split into two 5-a-side halves, weekly repeat bookings, booking codes, loyalty free games, memberships/trials and revenue stats.</li>
-      <li>Built a responsive UI (sidebar at 900px and wider, bottom navigation on phones), light/dark themes, and 31 unit, cubit and widget tests. Deployed on Firebase Hosting as a PWA.</li>
-    </ul>
-    <p class="stack">Flutter · Dart · flutter_bloc (Cubit) · MVVM · Repository pattern · Firebase Auth · Cloud Firestore · Firebase Hosting · Security Rules</p>
-  </div>
-
   <h2>Education</h2>
   <div class="org"><b>Bachelor of Computer Application (BCA)</b><span class="date">2017 – 2021</span></div>
   <div class="sub" style="padding-left:11px">Patan Multiple Campus, Tribhuvan University, Kathmandu, Nepal</div>
@@ -135,6 +122,7 @@
 
   <h2>Selected Projects</h2>
   <ul class="b proj">
+    <li><b>KhelSlot</b>: futsal venue booking app in Flutter with BLoC (Cubit), MVVM, the repository pattern and Firebase.</li>
     <li><b>Computer Vision Projects</b>: hand gesture recognition and traffic sign detection using machine learning.</li>
     <li><b>Recommendation Engine</b>: music and movie recommender using collaborative filtering on public datasets.</li>
     <li><b>NEWSIO</b>: Flutter news aggregator pulling articles from multiple international sources.</li>
