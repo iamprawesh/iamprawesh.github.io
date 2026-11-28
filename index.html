@@ -515,6 +515,14 @@
   const img = new Image();
   img.onload = () => { const a = document.getElementById('avatar'); a.style.backgroundImage = `url(${img.src})`; a.textContent = ''; };
   img.src = 'images/profile-picture.jpeg';
+  // rotate the role in the browser tab title
+  const roles = ['Mobile Developer', 'Flutter Engineer', 'Android (Kotlin) Developer'];
+  let r = 0;
+  setInterval(() => {
+    if (document.hidden) return; // don't change it while the tab is in the background
+    r = (r + 1) % roles.length;
+    document.title = `Prawesh Panthi — ${roles[r]}`;
+  }, 3000);
 </script>
 </body>
 </html>
