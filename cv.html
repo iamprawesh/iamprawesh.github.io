@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prawesh Panthi — CV</title>
+<title>Prawesh Panthi — Mobile Developer CV</title>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <style>
   :root{--navy:#1f3a68;--blue:#2f6fbf;--band:#e9eff8;--text:#2b2f36;--muted:#5b6270}
@@ -134,5 +134,18 @@
 </td></tr></tbody></table>
 </div>
 <p class="back"><a href="index.html">← Back to website</a> · Press Ctrl+P and choose "Save as PDF" to download.</p>
+<script>
+  // rotate the role in the browser tab title, like the homepage
+  const roles = ['Mobile Developer', 'Flutter Engineer', 'Android (Kotlin) Developer'];
+  let r = 0, printing = false;
+  setInterval(() => {
+    if (document.hidden || printing) return;
+    r = (r + 1) % roles.length;
+    document.title = `Prawesh Panthi — ${roles[r]} CV`;
+  }, 3000);
+  // the browser names the saved PDF after the page title, so fix it while printing
+  addEventListener('beforeprint', () => { printing = true; document.title = 'Prawesh_Panthi_Mobile_Developer_CV'; });
+  addEventListener('afterprint', () => { printing = false; document.title = `Prawesh Panthi — ${roles[r]} CV`; });
+</script>
 </body>
 </html>
